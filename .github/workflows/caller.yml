@@ -1,0 +1,16 @@
+name: CICD CDK deployment workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  caller:
+    uses: XX9-YE-SONG/cloudci-cicd-templates/.github/workflows/cicd-cdk.yml@main
+    with:
+      test-account-number: 111
+      prod-account-number: 222
+      artifact-bucket-name: artifact-bucket-name
+      tool-bucket-name: tool-bucket-name
+      org-name: org-name
+      product-name: product-name
+      module-name: module-name
